@@ -1,23 +1,28 @@
-document.getElementById('stopButton').onclick = illuminateRed;
-document.getElementById('slowButton').onclick = illuminateYellow;
-document.getElementById('goButton').onclick = illuminateGreen;
+const redButton = document.getElementById('stopButton');
+const yellowButton = document.getElementById('slowButton');
+const greenButton = document.getElementById('goButton');
+const redLight = document.getElementById('stopLight');
+const yellowLight = document.getElementById('slowLight');
+const greenLight = document.getElementById('goLight')
 
 function illuminateRed() {
   clearLights();
-  document.getElementById('stopLight').style.backgroundColor = "red";
-}
+  redLight.style.backgroundColor = "red";
+};
 
 function illuminateYellow() {
   clearLights();
-  document.getElementById('slowLight').style.backgroundColor = "yellow";
-}
+  yellowLight.style.backgroundColor = "yellow";
+};
+
 function illuminateGreen() {
   clearLights();
-  document.getElementById('goLight').style.backgroundColor = "green";
-}
+  greenLight.style.backgroundColor = "green";
+};
+
 
 function clearLights() {
   document.getElementById('stopLight').style.backgroundColor = "black";
   document.getElementById('slowLight').style.backgroundColor = "black";
   document.getElementById('goLight').style.backgroundColor = "black";
-}
+};
